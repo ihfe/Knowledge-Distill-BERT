@@ -26,7 +26,8 @@
 
 📌三）相关工作
 
-尝试了两种学生模型：学生模型2和学生模型3
+尝试了两种学生模型：学生模型2和学生模型4
+
 - ①学生模型1: 自定义6层bert模型；使用`transformer`中的`BertConfig`去修改`BERT`模型的层数、隐藏层维度等超参数【十分不建议】
 - ②学生模型2: 学生模型截取老师模型的前几层
 ```python
@@ -52,7 +53,8 @@ student_model.encoder.layer[:6] = teacher_model.encoder.layer[:6]
 
 - ③学生模型3:教师模型用参数量大的预训练模型如`Bert-Large`,学生模型用参数量小的预训练模型如`DistilBERT` 
 
-- 再或者像是`DistilBERT`,可以手动从加载好的教师模型中提取某些层的权重，然后赋值给你自定义的学生模型。
+- ④学生模型4: 再或者像是`DistilBERT`这篇论文的思想,咱们可以手动从加载好的教师模型中提取某些层的权重，然后赋值给你自定义的学生模型。
+
 ```python
 from transformers import BertModel, BertConfig
 
