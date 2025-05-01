@@ -1,20 +1,22 @@
 📌一）数据集
 
-9分类
+9个标签，算是9分类啦~
 
-标签 | 含义
-B-PER | 人名开始（Beginning of a person entity）
-I-PER | 人名内部（Inside a person entity）
-B-LOC | 地名开始
-I-LOC | 地名内部
-B-ORG | 组织名开始
-I-ORG | 组织名内部
-B-MISC | 其他实体开始
-I-MISC | 其他实体内部
-O | 非实体（Outside）
+| 标签     | 含义                                          |
+|----------|-----------------------------------------------|
+| B-PER    | 人名开始 (Beginning of a person entity)       |
+| I-PER    | 人名内部 (Inside a person entity)             |
+| B-LOC    | 地名开始                                      |
+| I-LOC    | 地名内部                                      |
+| B-ORG    | 组织名开始                                    |
+| I-ORG    | 组织名内部                                    |
+| B-MISC   | 其他实体开始                                  |
+| I-MISC   | 其他实体内部                                  |
+| O        | 非实体 (Outside)                              |
 
 
-测试集里面是有标注的（NER标签也给出），因为这是用于**离线评估**的，不是现实部署测试。
+
+测试集：因为是用于**离线评估**的，不是现实部署测试。所以里面也是有标注的（NER标签也给出），
 
 📌二）
 我们将数据集中的数据转为`input_ids`,`attention_mask`,`labels`;
